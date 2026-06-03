@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="47bcea88-a9ea-43b9-a3e0-c4e2b7607411" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/myml.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/data/data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/models/NDIP_fill_parallel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/models/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/models/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/myelements/B2Latt.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/myelements/External.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/myelements/Laves.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/myelements/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/myelements/bccC1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/myelements/elementC1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/myelements/hcpC1.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/myelements/myelements.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/myelements/omegas.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/myglobal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/plot/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/plot/plot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/predict/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/predict/predict.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/sublatt/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/sublatt/sublatt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/utils/DB_generator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myml4hea.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE.rst" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.rst" beforeDir="false" afterPath="$PROJECT_DIR$/README.rst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contributors.txt" beforeDir="false" afterPath="$PROJECT_DIR$/contributors.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/CoCrFeMnNi_paramagnetic_fcc.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kfcd/CoCrFeMnNi_d1_0.00_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kfcd/CoCrFeMnNi_d1_0.01_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kfcd/CoCrFeMnNi_d1_0.02_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kfcd/CoCrFeMnNi_d1_0.03_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kfcd/CoCrFeMnNi_d1_0.04_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kfcd/CoCrFeMnNi_d1_0.05_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kfcd/CoCrFeMnNi_d2_0.00_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kfcd/CoCrFeMnNi_d2_0.01_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kfcd/CoCrFeMnNi_d2_0.02_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kfcd/CoCrFeMnNi_d2_0.03_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kfcd/CoCrFeMnNi_d2_0.04_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kfcd/CoCrFeMnNi_d2_0.05_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kgrn/CoCrFeMnNi_d1_0.00_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kgrn/CoCrFeMnNi_d1_0.01_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kgrn/CoCrFeMnNi_d1_0.02_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kgrn/CoCrFeMnNi_d1_0.03_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kgrn/CoCrFeMnNi_d1_0.04_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kgrn/CoCrFeMnNi_d1_0.05_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kgrn/CoCrFeMnNi_d2_0.00_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kgrn/CoCrFeMnNi_d2_0.01_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kgrn/CoCrFeMnNi_d2_0.02_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kgrn/CoCrFeMnNi_d2_0.03_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kgrn/CoCrFeMnNi_d2_0.04_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/elastic_constants/kgrn/CoCrFeMnNi_d2_0.05_2.602000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kfcd/CoCrFeMnNi_2.500000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kfcd/CoCrFeMnNi_2.517857.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kfcd/CoCrFeMnNi_2.535714.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kfcd/CoCrFeMnNi_2.553571.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kfcd/CoCrFeMnNi_2.571429.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kfcd/CoCrFeMnNi_2.589286.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kfcd/CoCrFeMnNi_2.607143.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kfcd/CoCrFeMnNi_2.625000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kfcd/CoCrFeMnNi_2.642857.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kfcd/CoCrFeMnNi_2.660714.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kfcd/CoCrFeMnNi_2.678571.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kfcd/CoCrFeMnNi_2.696429.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kfcd/CoCrFeMnNi_2.714286.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kfcd/CoCrFeMnNi_2.732143.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kfcd/CoCrFeMnNi_2.750000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kgrn/CoCrFeMnNi_2.500000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kgrn/CoCrFeMnNi_2.517857.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kgrn/CoCrFeMnNi_2.535714.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kgrn/CoCrFeMnNi_2.553571.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kgrn/CoCrFeMnNi_2.571429.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kgrn/CoCrFeMnNi_2.589286.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kgrn/CoCrFeMnNi_2.607143.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kgrn/CoCrFeMnNi_2.625000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kgrn/CoCrFeMnNi_2.642857.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kgrn/CoCrFeMnNi_2.660714.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kgrn/CoCrFeMnNi_2.678571.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kgrn/CoCrFeMnNi_2.696429.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kgrn/CoCrFeMnNi_2.714286.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kgrn/CoCrFeMnNi_2.732143.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/eq_vol_bmod/kgrn/CoCrFeMnNi_2.750000.prn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/input_scripts/elastic_constants/input.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/fcc_elastic_constants/input_scripts/equilibrium_volume/input.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/hcp_equilibrium_volume/input.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/plot_dos/.ipynb_checkpoints/pyemto_dos-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/plot_dos/FeNi_0.00_dos.dos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/plot_dos/FeNi_0.50_dos.dos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example_projects/plot_dos/pyemto_dos.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/EOS/EOS.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/EOS/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/EOS/asturfit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/c/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/c/c_lattice.pyx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/common/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/common/common.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/emto_parser/AlCoCrFeNi.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/emto_parser/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/emto_parser/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/emto_parser/dos_parser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/emto_parser/emtoparser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/emto_parser/pandas_help" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/emto_parser/periodic_table.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/emtoinputs/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/emtoinputs/aconf.pckl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/emtoinputs/batch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/emtoinputs/emtoinputs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/emtoinputs/kfcd.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/emtoinputs/kgrn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/B2_Cr.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/CoCrFeMnNi_fcc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/L11_CuPt.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/alloy_discovery/alloy_discovery.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/alloy_discovery/collect_alloy_final.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/alloy_discovery/create_submit_all_script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/alloy_discovery/create_submit_final_script.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/alloy_discovery/make_alloy_final.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/alloy_discovery/make_alloy_inputs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/alloy_discovery/make_lattices.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/create_L11.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/emto_input_generator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/fe.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/fe_elastic_constants.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/generate_bcc_fcc_ssos.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/results/cocrfemnni.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/results/cocrfemnni.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/results/cocrfemnni_moms.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/results/fe.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/results/fe_elastic_constants.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/results/ti_elastic_constants.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/results/ti_hcp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/ssos_bcc_fcc_structures.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/structures.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/examples/ti_hcp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/free_energy/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/free_energy/free_energy.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/jij/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/myml/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/jij/create_jij_input" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/latticeinputs/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/latticeinputs/batch.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/latticeinputs/bmdl.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/latticeinputs/kstr.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/latticeinputs/latticeinputs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/latticeinputs/shape.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/space_group/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/space_group/generate_space_group_dics.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/space_group/space_groups.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/system.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/tags" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/utilities/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/utilities/create_aconf_dict.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyemto/utilities/utils.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/setup.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2iWXhPx0Y3tTnl4TNcaxi6uZ839" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Compression_gbr.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Compression_gbr4summary.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Display.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Elongation_gbr.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Elongation_gbr4summary.executor&quot;: &quot;Run&quot;,
+    &quot;Python.NDIP.executor&quot;: &quot;Run&quot;,
+    &quot;Python.NDIP_fill_parallel.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PDPlot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Predictor.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Vicker_gbr.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Vicker_gbr4summary.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Yield_gbr4summary.executor&quot;: &quot;Run&quot;,
+    &quot;Python.composition_expansion_evaluation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.compositionspace.executor&quot;: &quot;Run&quot;,
+    &quot;Python.data_util.executor&quot;: &quot;Run&quot;,
+    &quot;Python.display.executor&quot;: &quot;Run&quot;,
+    &quot;Python.make_B2latt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.make_Laves.executor&quot;: &quot;Run&quot;,
+    &quot;Python.myglobal.executor&quot;: &quot;Run&quot;,
+    &quot;Python.predict.executor&quot;: &quot;Run&quot;,
+    &quot;Python.recompute_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.remake_element.executor&quot;: &quot;Run&quot;,
+    &quot;Python.standardize.executor&quot;: &quot;Run&quot;,
+    &quot;Python.standarize.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stardardize.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ternary_NDIP.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.thermocalc_util.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/taoliang/PycharmProjects/myml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/make_database" />
+      <recent name="$PROJECT_DIR$/myml/data" />
+      <recent name="$PROJECT_DIR$/myml/dataexpansion" />
+      <recent name="$PROJECT_DIR$/TC_results" />
+      <recent name="$PROJECT_DIR$/ORG_DATA" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/myml/expansion" />
+      <recent name="$PROJECT_DIR$/myml/dataexpansion" />
+      <recent name="$PROJECT_DIR$/TC_results" />
+      <recent name="$PROJECT_DIR$/myml/utils" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="TC24A_HOME" value="/Applications/Thermo-Calc-2024a.app/Contents/Resources" />
+        <env name="LSHOST" value="ls2.mabe.utk.edu" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-4e2b1448bda8-9a97661f3031-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-252.27397.106" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="47bcea88-a9ea-43b9-a3e0-c4e2b7607411" name="Changes" comment="" />
+      <created>1719607425828</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719607425828</updated>
+      <workItem from="1764594245161" duration="1170000" />
+      <workItem from="1765206347507" duration="1998000" />
+      <workItem from="1765300938955" duration="264000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+</project>
