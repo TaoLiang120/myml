@@ -1,0 +1,2 @@
+key,mse_test,rmse_test,mae_test,rmae_test,r2_test,mse_all,rmse_all,mae_all,rmae_all,r2_all
+Elongation_EXP,8.30504850,52.27520497,6.19134561,38.97073696,0.10105240,5.56693041,34.20009210,4.10841214,25.23977550,0.75070851
