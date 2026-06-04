@@ -19,7 +19,7 @@ colorkey = "temperature"
 keys = ["Yield_EXP"]
 thress = [0.8]
 regressor = "GBR"
-temp = 300
+temp = None
 warm_start = True
 if isLOAD:
     loadmodel=True

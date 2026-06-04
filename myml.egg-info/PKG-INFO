@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: myml
+Version: 1.0.0
+Summary: My machine learning program for high entropy alloys
+Home-page: https://github.com/TaoLiang/myml
+Author: Tao Liang
+Author-email: tliang7@utk.edu
+License: MIT
+Keywords: MYML
+Classifier: Programming Language :: Python :: 3.5
+License-File: LICENSE.rst
+
+myml
+======
+
+A custom machine learning models for high entropy alloys with Ti, V, Cr, Zr, Nb, Mo, Hf, Ta and W
+
+Installation
+------------
+
+::
+   python setup.py install
+

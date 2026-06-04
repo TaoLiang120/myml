@@ -1,0 +1,2 @@
+key,mse_test,rmse_test,mae_test,rmae_test,r2_test,mse_all,rmse_all,mae_all,rmae_all,r2_all
+Yield_EXP,546.38975585,72.09970743,434.11630363,57.28448996,0.06287178,451.08705003,54.29202691,359.00260567,43.20890863,0.49286842
