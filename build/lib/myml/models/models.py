@@ -602,7 +602,13 @@ class MLRegressor:
         model = self.models[mname]
 
         Xdf = pd.DataFrame(X_test, columns=self.labels)
-        explainer = shap.Explainer(model, Xdf)
+
+        masker = shap.maskers.Independent(
+            Xdf,
+            max_samples=4000
+        )
+
+        explainer = shap.Explainer(model, masker)
         shap_values = explainer(Xdf, check_additivity=False)
 
         plt.rcParams["font.family"] = "serif"
@@ -636,7 +642,8 @@ class MLRegressor:
             shap_df.to_csv(self.mname_header + mname + "_SHAP.csv")
 
         if color_bar:
-            plt.colorbar().ax.tick_params(direction="in", labelsize=0)
+            #plt.colorbar().ax.tick_params(direction="in", labelsize=0)
+            pass
 
         if savefig:
             outfile = self.outfig_header + key
@@ -1156,10 +1163,10 @@ class MLRegressor:
                         print(f"irabs:{irabs} relative_error:{relative_error}")
                         print(f"test_rabs:{test_rabs} pred_rabs:{pred_rabs}")
                         print(f"imax_rabs:{imax_rabs} compstr_rabs:{compstr_rabs}")
-                        print(f"istd:{istd} test_std:{test_std} pred_std:{pred_std}")
+                        print(f"istd:{istd} standardized_error:{standardized_error}")
+                        print(f"test_std:{test_std} pred_std:{pred_std}")
                         print(f"imax_std:{imax_std} compstr_std:{compstr_std}")
                         print(f"--- {imodel} --- \n")
-
                 thisdict = {
                             "imodel": imodel, "score": thisscore,
                             "imax_abs": imax_abs, "abs_error": abs_error, "compstr_abs": compstr_abs,

@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47bcea88-a9ea-43b9-a3e0-c4e2b7607411" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/DevelopingML/Yield_gbr.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/DevelopingML/Yield_gbr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/lib/myml/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/myml/models/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myml/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/myml/models/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,56 +31,56 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.Compression_gbr.executor": "Run",
-    "Python.Compression_gbr4summary.executor": "Run",
-    "Python.Display.executor": "Run",
-    "Python.Elongation_gbr.executor": "Run",
-    "Python.Elongation_gbr4summary.executor": "Run",
-    "Python.NDIP.executor": "Run",
-    "Python.NDIP_fill_parallel.executor": "Run",
-    "Python.PDPlot.executor": "Run",
-    "Python.Predictor.executor": "Run",
-    "Python.Vicker_gbr.executor": "Run",
-    "Python.Vicker_gbr4summary.executor": "Run",
-    "Python.Yield_gbr.executor": "Run",
-    "Python.Yield_gbr4summary.executor": "Run",
-    "Python.composition_expansion_evaluation.executor": "Run",
-    "Python.compositionspace.executor": "Run",
-    "Python.data_util.executor": "Run",
-    "Python.display.executor": "Run",
-    "Python.make_B2latt.executor": "Run",
-    "Python.make_Laves.executor": "Run",
-    "Python.myglobal.executor": "Run",
-    "Python.predict.executor": "Run",
-    "Python.recompute_data.executor": "Run",
-    "Python.remake_element.executor": "Run",
-    "Python.standardize.executor": "Run",
-    "Python.standarize.executor": "Run",
-    "Python.stardardize.executor": "Run",
-    "Python.ternary_NDIP.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.thermocalc_util.executor": "Run",
-    "Python.utils.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "/Users/taoliang/PycharmProjects/myml/examples/Predictor",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Compression_gbr.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Compression_gbr4summary.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Display.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Elongation_gbr.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Elongation_gbr4summary.executor&quot;: &quot;Run&quot;,
+    &quot;Python.NDIP.executor&quot;: &quot;Run&quot;,
+    &quot;Python.NDIP_fill_parallel.executor&quot;: &quot;Run&quot;,
+    &quot;Python.PDPlot.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Predictor.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Vicker_gbr.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Vicker_gbr4summary.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Yield_gbr.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Yield_gbr4summary.executor&quot;: &quot;Run&quot;,
+    &quot;Python.composition_expansion_evaluation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.compositionspace.executor&quot;: &quot;Run&quot;,
+    &quot;Python.data_util.executor&quot;: &quot;Run&quot;,
+    &quot;Python.display.executor&quot;: &quot;Run&quot;,
+    &quot;Python.make_B2latt.executor&quot;: &quot;Run&quot;,
+    &quot;Python.make_Laves.executor&quot;: &quot;Run&quot;,
+    &quot;Python.myglobal.executor&quot;: &quot;Run&quot;,
+    &quot;Python.predict.executor&quot;: &quot;Run&quot;,
+    &quot;Python.recompute_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.remake_element.executor&quot;: &quot;Run&quot;,
+    &quot;Python.standardize.executor&quot;: &quot;Run&quot;,
+    &quot;Python.standarize.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stardardize.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ternary_NDIP.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.thermocalc_util.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/taoliang/PycharmProjects/myml/examples/Predictor&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/examples/Predictor" />

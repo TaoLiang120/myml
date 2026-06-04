@@ -1079,6 +1079,18 @@ class MLRegressor:
                                            predictions2data=Save_Pred2Data, plot_predict_all=plot_predict_all,
                                            savefig=savefig, colorkey=colorkey)
 
+    def find_outfliers(self, y_test, preds, threshold=3.0, inds_data=None, **kwargs):
+        if inds_data is None:
+            inds_data = np.arange(len(y_test), dtype = "int")
+        resids = y_test - preds
+        resid_std = np.std(resids)
+        standardized_resids = resids / resid_std
+        local_inds = np.arange(len(y_test), dtype = "int")
+        out_inds = np.compress(np.abs(standardized_resids) > threshold, local_inds)
+        return inds_data[out_inds]
+
+
+
     def kfold_crossvalidation(self, n_splits, n_repeats=1, style="KFold", random_state=None, find_outfliers=False):
         from sklearn.model_selection import RepeatedKFold, RepeatedStratifiedKFold
         if not os.path.isdir(os.path.join(os.getcwd(), self.SAVE_PATH)):
@@ -1163,10 +1175,10 @@ class MLRegressor:
                         print(f"irabs:{irabs} relative_error:{relative_error}")
                         print(f"test_rabs:{test_rabs} pred_rabs:{pred_rabs}")
                         print(f"imax_rabs:{imax_rabs} compstr_rabs:{compstr_rabs}")
-                        print(f"istd:{istd} test_std:{test_std} pred_std:{pred_std}")
+                        print(f"istd:{istd} standardized_error:{standardized_error}")
+                        print(f"test_std:{test_std} pred_std:{pred_std}")
                         print(f"imax_std:{imax_std} compstr_std:{compstr_std}")
                         print(f"--- {imodel} --- \n")
-
                 thisdict = {
                             "imodel": imodel, "score": thisscore,
                             "imax_abs": imax_abs, "abs_error": abs_error, "compstr_abs": compstr_abs,
