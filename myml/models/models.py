@@ -602,7 +602,13 @@ class MLRegressor:
         model = self.models[mname]
 
         Xdf = pd.DataFrame(X_test, columns=self.labels)
-        explainer = shap.Explainer(model, Xdf)
+
+        masker = shap.maskers.Independent(
+            Xdf,
+            max_samples=4000
+        )
+
+        explainer = shap.Explainer(model, masker)
         shap_values = explainer(Xdf, check_additivity=False)
 
         plt.rcParams["font.family"] = "serif"
@@ -636,7 +642,8 @@ class MLRegressor:
             shap_df.to_csv(self.mname_header + mname + "_SHAP.csv")
 
         if color_bar:
-            plt.colorbar().ax.tick_params(direction="in", labelsize=0)
+            #plt.colorbar().ax.tick_params(direction="in", labelsize=0)
+            pass
 
         if savefig:
             outfile = self.outfig_header + key
