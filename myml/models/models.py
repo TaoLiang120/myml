@@ -16,6 +16,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error
 from sklearn.model_selection import train_test_split
 from sklearn.neural_network import MLPRegressor
 from sklearn.inspection import DecisionBoundaryDisplay
+from sklearn.model_selection import RepeatedKFold, RepeatedStratifiedKFold
 
 from myml.data.data import myData, DATA_PATH
 from myml.myelements.myelements import eos_keys, hcp_eos_keys, transformkey, elastic_keys, TC_keys
@@ -1079,28 +1080,24 @@ class MLRegressor:
                                            predictions2data=Save_Pred2Data, plot_predict_all=plot_predict_all,
                                            savefig=savefig, colorkey=colorkey)
 
-    def find_outfliers(self, y_test, preds, threshold=3.0, inds_data=None, **kwargs):
-        if inds_data is None:
-            inds_data = np.arange(len(y_test), dtype = "int")
-        resids = y_test - preds
-        resid_std = np.std(resids)
-        standardized_resids = resids / resid_std
-        local_inds = np.arange(len(y_test), dtype = "int")
-        out_inds = np.compress(np.abs(standardized_resids) > threshold, local_inds)
-        return inds_data[out_inds]
+    def kfold_crossvalidation(self, n_splits, n_repeats=1, style="KFold", random_state=None,
+                              find_outliers=False, thres4outliers=3.0):
+        def get_outliers_index(standardized_resids, threshold=3.0):
+            local_inds = np.arange(len(standardized_resids), dtype="int")
+            out_inds = np.compress(np.abs(standardized_resids) > threshold, local_inds)
+            if len(out_inds) == 0:
+                return np.array([], dtype="int")
+            else:
+                return out_inds
 
-
-
-    def kfold_crossvalidation(self, n_splits, n_repeats=1, style="KFold", random_state=None, find_outfliers=False):
-        from sklearn.model_selection import RepeatedKFold, RepeatedStratifiedKFold
         if not os.path.isdir(os.path.join(os.getcwd(), self.SAVE_PATH)):
             os.mkdir(os.path.join(os.getcwd(), self.SAVE_PATH))
 
         kfold_key_keys = ["imodel", "score",
                           "imax_abs", "abs_error", "compstr_abs",
                           "imax_rabs", "relative_error", "compstr_rabs",
-                          "imax_std", "standardized_error", "compstr_std"
-                          ]
+                          "imax_std", "standardized_error", "compstr_std",
+                          "outliers"]
 
         kfold_keys = ["key", "R2_AVG_ALL", "R2_STDEV"]
         kfold_df = pd.DataFrame(columns=kfold_keys)
@@ -1131,6 +1128,8 @@ class MLRegressor:
             standardized_error = "INF"
             compstr_std = "NA"
 
+            outliers = np.array([], dtype="int")
+
             imodel = 0
             thisR2s = []
             df = pd.DataFrame(columns=kfold_key_keys)
@@ -1138,7 +1137,7 @@ class MLRegressor:
                 X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]
                 model = self.get_regression_model(X_train, y_train, key, savemodel=False)
                 thisscore = model.score(X_test, y_test)
-                if find_outfliers:
+                if find_outliers:
                     preds = model.predict(X_test)
 
 
@@ -1168,6 +1167,13 @@ class MLRegressor:
                     imax_std = test[istd]
                     compstr_std = self.data.gooddf.iloc[imax_std]["Composition"]
 
+
+                    local_outliers = get_outliers_index(standardized_resids, threshold=thres4outliers)
+                    if len(local_outliers) > 0:
+                        outliers = test[local_outliers]
+                    else:
+                        outliers = np.array([], dtype="int")
+
                     if imodel % 50 == 0:
                         print(f"iabs:{iabs} abs_error:{abs_error}")
                         print(f"test_abs:{test_abs} pred_abs:{pred_abs}")
@@ -1178,13 +1184,14 @@ class MLRegressor:
                         print(f"istd:{istd} standardized_error:{standardized_error}")
                         print(f"test_std:{test_std} pred_std:{pred_std}")
                         print(f"imax_std:{imax_std} compstr_std:{compstr_std}")
+                        print(f"outliers:{outliers}")
                         print(f"--- {imodel} --- \n")
                 thisdict = {
                             "imodel": imodel, "score": thisscore,
                             "imax_abs": imax_abs, "abs_error": abs_error, "compstr_abs": compstr_abs,
                             "imax_rabs": imax_rabs, "relative_error": relative_error, "compstr_rabs": compstr_rabs,
-                            "imax_std": imax_std, "standardized_error": standardized_error, "compstr_std": compstr_std
-                             }
+                            "imax_std": imax_std, "standardized_error": standardized_error, "compstr_std": compstr_std,
+                            "outliers": str(tuple(outliers))}
 
                 df.loc[len(df)] = thisdict
                 thisR2s.append(thisscore)
