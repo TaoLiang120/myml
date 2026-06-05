@@ -27,7 +27,8 @@ def init_thisdict(features):
 def kfold_cv_model(fname, mname_header, keys, features, regressor, n_splits, n_repeats,
                    temp=None, T_logic="larger",
                    min_samples_leaf=None, warm_start=True,
-                   style="StratifiedKFold", random_state=None, find_outliers=False):
+                   style="StratifiedKFold", random_state=None,
+                   find_outliers=False, thres4outliers=3.0):
     Source = "EXTERNAL"
     thisdata = myData(os.path.join(DATA_PATH, fname), from_DATA=from_DATA, Source=Source)
     if temp is None:
@@ -52,7 +53,7 @@ def kfold_cv_model(fname, mname_header, keys, features, regressor, n_splits, n_r
                           features=features, learning_rate=learning_rate,
                           min_samples_leaf=min_samples_leaf, warm_start=warm_start)
     perform_df = thisMLR.kfold_crossvalidation(n_splits, n_repeats=n_repeats, style=style, random_state=random_state,
-                                               find_outliers=find_outliers)
+                                               find_outliers=find_outliers, thres4outliers=thres4outliers)
 
     return perform_df
 
