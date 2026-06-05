@@ -18,6 +18,7 @@ from sklearn.neural_network import MLPRegressor
 from sklearn.inspection import DecisionBoundaryDisplay
 from sklearn.model_selection import RepeatedKFold, RepeatedStratifiedKFold
 
+from build.lib.myml.myglobal import VERY_SMALL_VALUE
 from myml.data.data import myData, DATA_PATH
 from myml.myelements.myelements import eos_keys, hcp_eos_keys, transformkey, elastic_keys, TC_keys
 from myml.myglobal import config_vars, Constants, Element_negativity
@@ -1143,8 +1144,8 @@ class MLRegressor:
 
                     resids = y_test - preds
                     resid_std = np.std(resids)
-                    relative_resids = resids / y_test
-                    standardized_resids = resids / resid_std
+                    relative_resids = resids / (y_test + VERY_SMALL_VALUE)
+                    standardized_resids = resids / (resid_std + VERY_SMALL_VALUE)
 
                     iabs = np.argmax(np.abs(resids))
                     abs_error = resids[iabs]
