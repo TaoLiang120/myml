@@ -18,7 +18,7 @@ from sklearn.neural_network import MLPRegressor
 from sklearn.inspection import DecisionBoundaryDisplay
 from sklearn.model_selection import RepeatedKFold, RepeatedStratifiedKFold
 
-from build.lib.myml.myglobal import VERY_SMALL_VALUE
+from myml.myglobal import VERY_SMALL_VALUE
 from myml.data.data import myData, DATA_PATH
 from myml.myelements.myelements import eos_keys, hcp_eos_keys, transformkey, elastic_keys, TC_keys
 from myml.myglobal import config_vars, Constants, Element_negativity
