@@ -1126,11 +1126,11 @@ class MLRegressor:
                 thisscore = model.score(X_test, y_test)
 
                 thisdict = {}
-                for key in kfold_key_keys:
-                    thisdict[key] = "NA"
+                for kfoldkey in kfold_key_keys:
+                    thisdict[kfoldkey] = "NA"
                 thisdict = {"imodel": imodel, "score": thisscore}
 
-                if imodel % 10 == 0:
+                if imodel % 50 == 0:
                     print_results = True
                 else:
                     print_results = False
