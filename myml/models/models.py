@@ -1130,7 +1130,7 @@ class MLRegressor:
                     thisdict[kfoldkey] = "NA"
                 thisdict = {"imodel": imodel, "score": thisscore}
 
-                if imodel % 50 == 0:
+                if imodel % 20 == 0:
                     print_results = True
                 else:
                     print_results = False
