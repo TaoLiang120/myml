@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47bcea88-a9ea-43b9-a3e0-c4e2b7607411" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/lib/myml/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/build/lib/myml/models/models.py" afterDir="false" />
-    </list>
+    <list default="true" id="47bcea88-a9ea-43b9-a3e0-c4e2b7607411" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

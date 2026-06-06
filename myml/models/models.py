@@ -1152,15 +1152,17 @@ class MLRegressor:
                             if print_results:
                                 print(f"---- max abs_error ----")
                         elif ierror == 1:
-                            print(f"---- max relative_error ----")
                             thisdict["imax_rabs"] = imax_data
                             thisdict["relative_error"] = maxerror
                             thisdict["compstr_rabs"] = compstr
+                            if print_results:
+                                print(f"---- max relative_error ----")
                         elif ierror == 2:
-                            print(f"---- max standardized_error ----")
                             thisdict["imax_std"] = imax_data
                             thisdict["standardized_error"] = maxerror
                             thisdict["compstr_std"] = compstr
+                            if print_results:
+                                print(f"---- max standardized_error ----")
                         if print_results:
                             print(f"imax: {imax} max error: {maxerror}")
                             print(f"target:{yhat} prediction: {pred}")
