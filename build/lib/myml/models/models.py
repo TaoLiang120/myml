@@ -1117,20 +1117,6 @@ class MLRegressor:
                 rkf = RepeatedKFold(n_splits=n_splits, n_repeats=n_repeats, random_state=random_state)
                 y4split = copy.deepcopy(y)
 
-            imax_abs = 0
-            abs_error = "INF"
-            compstr_abs = "NA"
-
-            imax_rabs = 0
-            relative_error = "INF"
-            compstr_rabs = "NA"
-
-            imax_std = 0
-            standardized_error = "INF"
-            compstr_std = "NA"
-
-            outliers = np.array([], dtype="int")
-
             imodel = 0
             thisR2s = []
             df = pd.DataFrame(columns=kfold_key_keys)
@@ -1138,65 +1124,58 @@ class MLRegressor:
                 X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]
                 model = self.get_regression_model(X_train, y_train, key, savemodel=False)
                 thisscore = model.score(X_test, y_test)
+                thisdict = {"imodel": imodel, "score": thisscore}
+                if imodel % 50 == 0:
+                    print_results = True
+                else:
+                    print_results = False
+
                 if find_outliers:
                     preds = model.predict(X_test)
-
-
                     resids = y_test - preds
                     resid_std = np.std(resids)
                     relative_resids = resids / (y_test + VERY_SMALL_VALUE)
                     standardized_resids = resids / (resid_std + VERY_SMALL_VALUE)
-
-                    iabs = np.argmax(np.abs(resids))
-                    abs_error = resids[iabs]
-                    test_abs = y_test[iabs]
-                    pred_abs = preds[iabs]
-                    imax_abs = test[iabs]
-                    compstr_abs = self.data.gooddf.iloc[imax_abs]["Composition"]
-
-                    irabs = np.argmax(np.abs(relative_resids))
-                    relative_error = relative_resids[irabs]
-                    test_rabs = y_test[irabs]
-                    pred_rabs = preds[irabs]
-                    imax_rabs = test[irabs]
-                    compstr_rabs = self.data.gooddf.iloc[imax_rabs]["Composition"]
-
-                    istd = np.argmax(np.abs(standardized_resids))
-                    standardized_error = standardized_resids[istd]
-                    test_std = y_test[istd]
-                    pred_std = preds[istd]
-                    imax_std = test[istd]
-                    compstr_std = self.data.gooddf.iloc[imax_std]["Composition"]
-
+                    errorss = [resids, relative_resids, standardized_resids]
+                    for ierror in range(len(errorss)):
+                        errors = copy.deepcopy(errorss[ierror])
+                        imax = np.argmax(np.abs(errors))
+                        maxerror = errors[imax]
+                        yhat = y_test[imax]
+                        pred = preds[imax]
+                        imax_data = test[imax]
+                        compstr = self.data.gooddf.iloc[imax_data]["Composition"]
+                        if ierror == 0:
+                            thisdict["imax_abs"] = imax_data
+                            thisdict["abs_error"] = maxerror
+                            thisdict["compstr_abs"] = compstr
+                            if print_results:
+                                print(f"---- max abs_error ----")
+                        elif ierror == 1:
+                            print(f"---- max relative_error ----")
+                            thisdict["imax_rabs"] = imax_data
+                            thisdict["relative_error"] = maxerror
+                            thisdict["compstr_rabs"] = compstr
+                        elif ierror == 2:
+                            print(f"---- max standardized_error ----")
+                            thisdict["imax_std"] = imax_data
+                            thisdict["standardized_error"] = maxerror
+                            thisdict["compstr_std"] = compstr
+                        if print_results:
+                            print(f"imax: {imax} max error: {maxerror}")
+                            print(f"target:{yhat} prediction: {pred}")
+                            print(f"ind_data:{imax_data} compstr:{compstr}")
 
                     local_outliers = get_outliers_index(standardized_resids, threshold=thres4outliers)
                     if len(local_outliers) > 0:
                         outliers = test[local_outliers]
                     else:
                         outliers = np.array([], dtype="int")
-
-                    if imodel % 50 == 0:
-                        print(f"iabs:{iabs} abs_error:{abs_error}")
-                        print(f"test_abs:{test_abs} pred_abs:{pred_abs}")
-                        print(f"imax_abs:{imax_abs} compstr_abs:{compstr_abs}")
-                        print(f"irabs:{irabs} relative_error:{relative_error}")
-                        print(f"test_rabs:{test_rabs} pred_rabs:{pred_rabs}")
-                        print(f"imax_rabs:{imax_rabs} compstr_rabs:{compstr_rabs}")
-                        print(f"istd:{istd} standardized_error:{standardized_error}")
-                        print(f"test_std:{test_std} pred_std:{pred_std}")
-                        print(f"imax_std:{imax_std} compstr_std:{compstr_std}")
-                        print(f"outliers:{outliers}")
-                        print(f"--- {imodel} --- \n")
-                thisdict = {
-                            "imodel": imodel, "score": thisscore,
-                            "imax_abs": imax_abs, "abs_error": abs_error, "compstr_abs": compstr_abs,
-                            "imax_rabs": imax_rabs, "relative_error": relative_error, "compstr_rabs": compstr_rabs,
-                            "imax_std": imax_std, "standardized_error": standardized_error, "compstr_std": compstr_std,
-                            "outliers": str(tuple(outliers))}
+                    thisdict["outliers"] = str(tuple(local_outliers))
 
                 df.loc[len(df)] = thisdict
                 thisR2s.append(thisscore)
-                if imodel % 10 == 0:
+                if print_results:
                     print(f"key:{key} xtrain:{X_train.shape} xtest:{X_test.shape} imodel:{imodel} score:{thisscore}")
                 imodel += 1
 

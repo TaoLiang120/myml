@@ -1138,7 +1138,7 @@ class MLRegressor:
                     standardized_resids = resids / (resid_std + VERY_SMALL_VALUE)
                     errorss = [resids, relative_resids, standardized_resids]
                     for ierror in range(len(errorss)):
-                        errors = copy.deepcopy(errors[ierror])
+                        errors = copy.deepcopy(errorss[ierror])
                         imax = np.argmax(np.abs(errors))
                         maxerror = errors[imax]
                         yhat = y_test[imax]
