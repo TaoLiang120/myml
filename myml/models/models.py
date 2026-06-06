@@ -1124,8 +1124,13 @@ class MLRegressor:
                 X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]
                 model = self.get_regression_model(X_train, y_train, key, savemodel=False)
                 thisscore = model.score(X_test, y_test)
+
+                thisdict = {}
+                for key in kfold_key_keys:
+                    thisdict[key] = "NA"
                 thisdict = {"imodel": imodel, "score": thisscore}
-                if imodel % 50 == 0:
+
+                if imodel % 10 == 0:
                     print_results = True
                 else:
                     print_results = False
@@ -1173,7 +1178,9 @@ class MLRegressor:
                         outliers = test[local_outliers]
                     else:
                         outliers = np.array([], dtype="int")
-                    thisdict["outliers"] = str(tuple(local_outliers))
+                    thisdict["outliers"] = str(tuple(outliers))
+                    if print_results:
+                        print(f"outliers:{outliers}")
 
                 df.loc[len(df)] = thisdict
                 thisR2s.append(thisscore)

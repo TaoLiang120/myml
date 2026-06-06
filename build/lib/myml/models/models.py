@@ -1124,8 +1124,13 @@ class MLRegressor:
                 X_train, X_test, y_train, y_test = X[train], X[test], y[train], y[test]
                 model = self.get_regression_model(X_train, y_train, key, savemodel=False)
                 thisscore = model.score(X_test, y_test)
+
+                thisdict = {}
+                for key in kfold_key_keys:
+                    thisdict[key] = "NA"
                 thisdict = {"imodel": imodel, "score": thisscore}
-                if imodel % 50 == 0:
+
+                if imodel % 10 == 0:
                     print_results = True
                 else:
                     print_results = False
@@ -1152,15 +1157,17 @@ class MLRegressor:
                             if print_results:
                                 print(f"---- max abs_error ----")
                         elif ierror == 1:
-                            print(f"---- max relative_error ----")
                             thisdict["imax_rabs"] = imax_data
                             thisdict["relative_error"] = maxerror
                             thisdict["compstr_rabs"] = compstr
+                            if print_results:
+                                print(f"---- max relative_error ----")
                         elif ierror == 2:
-                            print(f"---- max standardized_error ----")
                             thisdict["imax_std"] = imax_data
                             thisdict["standardized_error"] = maxerror
                             thisdict["compstr_std"] = compstr
+                            if print_results:
+                                print(f"---- max standardized_error ----")
                         if print_results:
                             print(f"imax: {imax} max error: {maxerror}")
                             print(f"target:{yhat} prediction: {pred}")
@@ -1171,7 +1178,9 @@ class MLRegressor:
                         outliers = test[local_outliers]
                     else:
                         outliers = np.array([], dtype="int")
-                    thisdict["outliers"] = str(tuple(local_outliers))
+                    thisdict["outliers"] = str(tuple(outliers))
+                    if print_results:
+                        print(f"outliers:{outliers}")
 
                 df.loc[len(df)] = thisdict
                 thisR2s.append(thisscore)
